@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #507ca5;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-rows {
+  position: relative;
+  width: 100%;
+  height: 25%;
+}
+
+svg {
+  position: absolute;
+}
+
+.little-clouds {
+  width: 150px;
+}
+
+.big-clouds {
+  width: 300px;
+}
+
+.background-rows:first-child {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.background-rows:first-child svg:last-child {
+  margin-top: -200px;
+}
+
+.background-rows:nth-child(2) {
+  margin-top: 70px;
+  display: flex;
+}
+.background-rows:nth-child(2) svg:first-child {
+  margin-left: 200px;
+}
+.background-rows:nth-child(2) svg:nth-child(2) {
+  margin-top: 50px;
+  margin-left: 400px;
+}
+.background-rows:nth-child(2) svg:last-child {
+  margin-bottom: 100px;
+  margin-left: 250px;
+}
+
+.background-rows:nth-child(3) {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.background-rows:nth-child(3) svg:first-child {
+  margin-left: -150px;
+  margin-top: 50px;
+}
+.background-rows:nth-child(3) svg:nth-child(2) {
+  margin-top: 50px;
+  margin-left: 250px;
+}
+.background-rows:nth-child(3) svg:last-child {
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.background-rows:last-child {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+.background-rows:last-child svg:nth-child(2) {
+  margin-left: -200px;
+}
+
+/*# sourceMappingURL=index.css.map */
