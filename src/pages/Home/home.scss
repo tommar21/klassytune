@@ -1,0 +1,177 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #507ca5;
+}
+
+#background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-rows {
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+}
+
+.background-rows svg {
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.little-clouds {
+    width: 10rem;
+}
+
+.big-clouds {
+    width: 19rem;
+}
+
+@keyframes clouds {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+
+    51% {
+        transform: translateX(10000vw);
+    }
+
+    52% {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform: translateX(0vw);
+
+    }
+}
+
+@keyframes clouds2 {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100vw);
+
+    }
+}
+
+.background-rows:nth-child(odd) {
+
+    svg {
+        animation-name: clouds;
+        animation-duration: 120s;
+    }
+}
+
+.background-rows:nth-child(even) {
+
+    svg {
+        animation-name: clouds2;
+        animation-duration: 120s;
+        transform: translateX(100vw);
+    }
+}
+
+.background-rows:first-child {
+    margin-top: 3.125rem;
+
+    svg:first-child {
+        left: 12.5rem;
+    }
+
+    svg:nth-child(2) {
+        left: 60rem;
+    }
+
+    svg:last-child {
+        top: -7.5rem;
+        left: 90rem;
+    }
+}
+
+.background-rows:nth-child(2) {
+    margin-top: 4.375rem;
+
+    svg:first-child {
+        left: 10rem;
+    }
+
+    svg:nth-child(2) {
+        top: 3.125rem;
+        left: 50rem;
+    }
+
+    svg:last-child {
+        bottom: 7rem;
+        left: 85rem;
+    }
+}
+
+.background-rows:nth-child(3) {
+    margin-top: 20px;
+
+    svg:first-child {
+        top: -5rem;
+        left: 50.375rem;
+    }
+
+    svg:nth-child(2) {
+        top: 3.125rem;
+        left: 70rem;
+    }
+
+    svg:last-child {
+        top: 4rem;
+        left: 110rem;
+    }
+}
+
+.background-rows:last-child {
+    margin-top: 3.75rem;
+
+    svg:first-child {
+        top: 3rem;
+        left: 30rem;
+    }
+
+    svg:nth-child(2) {
+        left: 100rem;
+    }
+
+    svg:last-child {
+        left: 70rem;
+    }
+}
+
+@keyframes clouds1 {
+    to {
+        left: -200vw;
+    }
+}
